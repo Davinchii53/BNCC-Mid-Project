@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+    <div class="container">
+        <header>
+            <h1>To-Do List</h1>
+            <div class="header-right">
+                <div id="clock"></div>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="moon">🌙</i>
+                    <i class="sun">☀️</i>
+                </button>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Cari tugas..." class="search-input">
+        </div>
+
+        <form id="todoForm" class="todo-form">
+            <h2>Tambah Tugas Baru</h2>
+            
+            <div class="form-group">
+                <input type="text" id="titleInput" placeholder="Judul tugas" class="form-input">
+                <span class="error" id="titleError"></span>
+            </div>
+
+            <div class="form-group">
+                <textarea id="descriptionInput" placeholder="Deskripsi tugas" class="form-input"></textarea>
+                <span class="error" id="descriptionError"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="datetime-local" id="deadlineInput" class="form-input">
+                <span class="error" id="deadlineError"></span>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-primary">
+                    <span class="plus-icon">+</span> Tambah Tugas
+                </button>
+                <button type="button" id="cancelEdit" class="btn btn-secondary" style="display: none;">
+                    Batal
+                </button>
+            </div>
+        </form>
+
+        <div id="todoList" class="todo-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
